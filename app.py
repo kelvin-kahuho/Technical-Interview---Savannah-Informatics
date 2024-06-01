@@ -1,6 +1,18 @@
 from flask import Flask, render_template
+import mysql.connector
 
 app = Flask(__name__)
+
+#Database Connection config
+def get_db_connection():
+    conn = mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='heartattack2023',
+        database='CustomerandOrderDatabase'
+    )
+    return conn
+
 
 #login route
 @app.route('/')

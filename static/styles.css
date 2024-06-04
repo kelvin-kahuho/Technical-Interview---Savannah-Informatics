@@ -6,6 +6,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 15%;
 }
 
@@ -19,6 +20,12 @@ body {
     padding: 50px;
     border: slategrey solid 1px;
     box-shadow: 0 0 10px rgb(126, 119, 119);
+}
+
+.select {
+    height: 3em;
+    background-color: rgb(255, 246, 235);
+    border-radius: 5px;
 }
 
 /* input styling */
@@ -35,13 +42,36 @@ button {
     margin-top: 10px;
     height: 2.5em;
     width: 150px;
-    background-color: darkolivegreen;
+    background-color: rgb(5, 93, 151);
     border: solid black 1px;
     border-radius: 5px;
+    color: white;
 }
 
+/* Icons styling */
+.icon {
+    height: 50px;
+    width: 50px;
+}
 
 
 .spacer {
     width: 20px;
+}
+/* Success styling*/
+.success {
+    color: rgb(48, 190, 67);
+}
+
+/* Error styling*/
+.error {
+    color: red;
+}
+
+/* Footer styling*/
+
+footer {
+    top: 0;
+    display: flex;
+    justify-content: center;
 }

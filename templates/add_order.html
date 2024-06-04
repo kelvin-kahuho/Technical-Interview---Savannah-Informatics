@@ -10,8 +10,29 @@
 
     <div class="container">
 
+        <a href="{{ url_for('home') }}"> 
+            <img src="{{url_for('static', filename='left-arrow.png')}}" class="icon" alt="">
+        </a>
+
+
         <form action="/add_order" method="post" class="form">
             <h3>Add Order</h3>
+
+            <p class="success">{{success}}</p>
+            <p class="error">{{error}}</p>
+
+            <label for="customer_id">Customer Id:</label>
+            <select name="customer_id" id="customer_id" required class="select">
+                <option value="">Select Customer</option>
+
+                {% for customer in customers %}
+                <option value="{{ customer[0] }}"> {{ customer[1] }} </option>
+                {% endfor %}
+
+
+            </select>
+            
+
             <label for="item">Item:</label>
             <input type="text" id="item" name="item" required>
 

@@ -9,13 +9,24 @@
 <body>
     <div class="container">
 
+        <a href="{{ url_for('home') }}"> 
+            <img src="{{url_for('static', filename='left-arrow.png')}}" class="icon" alt="">
+        </a>
+
+
         <form action="/add_customer" method="post" class="form">
             <h3>Add Customer</h3>
+            <p class="success">{{success}}</p>
+            <p class="error">{{error}}</p>
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
             <label for="code">Code:</label>
             <input type="text" id="code" name="code" required>
+
+            <label for="phone">Phone Number: +2547***</label>
+            <input type="tel" id="phone" name="phone" pattern="^\+254[0-9]{9}$" required>
 
             <button type="submit">Add Customer</button>
         </form>

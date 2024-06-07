@@ -21,45 +21,70 @@ The Customer Order App is a simple web application designed for managing custome
 - Keycloak server for user authentication and authorization
 - Africa's Talking API credentials for SMS notifications
 
-1. ### Testing
-Used pytest to test my application's routes.
-Testing file:
-/test_app.py
+1. ### Development
+
+I used Flask to create a web service and define routes for the application.
+
+2. ### Testing
+Tested my application's routes.
+Testing files: 
+- ![alt text](test_app.yaml)
 
 ![alt text](screenshots/testing.png)
 
 
-2. ### Dockerize and push the App
+3. ### Dockerize and push the App
 Built and pushed the Docker image to Docker Hub.
 ![alt text](screenshots/Docker_build1.png)
 
 ```sh
-docker build -t kestack/customerorder-app:latest .
-docker push kestack/customerorder-app:latest
+docker build -t kestack/customer-order-app:latest .
+docker push kestack/customer-order-app:latest
 ```
 
-3. ### Pull Docker Image on Server
+4. ### Pull Docker Image on Server
 SSH into my server and pulled the Docker image from Docker Hub.
 
 ```sh
 docker pull kestack/customerorder-app:latest
 ```
 
-4. ### Set Up microk8s
-Installed and set up microk8s on my server.
+### Summary for microk8s Setup
 
-5. ### Deployed the app on microk8s
+5. ### Set Up microk8s**
+
+I installed and configured microk8s on my server to deploy the Customer Order App. The setup involved using three key configuration files:
+
+ **deployment.yaml**: 
+   - Defined the Kubernetes Deployment for the application, specifying the Docker image, replicas, and other deployment settings.
+
+ **service.yaml**: 
+   - Configured the Kubernetes Service to expose the application, facilitating network access to the app. A LoadBalancer service type was used to allow external access.
+
+ **hpa.yaml**: 
+   - Set up Horizontal Pod Autoscaler (HPA) to automatically scale the number of pod replicas based on CPU utilization, ensuring the application can handle varying loads efficiently.
+
+These files collectively ensured a robust and scalable deployment of the application within the Kubernetes cluster managed by microk8s.
+
+6. ### Deployed the app on microk8s
 
 Configurations files are 
-- /deployment.yaml
-- /service.yaml
-- /hpa.yaml
+- ![alt text](deployment.yaml) 
+- ![alt text](service.yaml)
+- ![alt text](hpa.yaml)
 
 Applied the deployment:
 
 ![alt text](screenshots/microk8s-deployment.png)
 
-6. ### Set Up Keycloak
+
+```sh
+sudo docker kubectl get all -A
+```
+
+![alt text](screenshots/microk8s-get-all.png)
+
+7. ### Set Up Keycloak
 Used KeyCloak's documentation to get started. https://www.keycloak.org/getting-started/getting-started-docker
 
 ![alt text](screenshots/keycloak-admin-login.png)
@@ -67,7 +92,7 @@ Used KeyCloak's documentation to get started. https://www.keycloak.org/getting-s
 Configured KeyCloak to Athenticate and Authorize Users for my app
 ![alt text](screenshots/customerorder-realm.png)
 
-7. ### Configure MySQL
+8. ### Configure MySQL
 Set up a MySQL database
 
 Created Customers Table
@@ -79,10 +104,18 @@ Created Orders Table
 Overall Database Schema
 ![alt text](<screenshots/Database Schema.png>)
 
-8. Configure SMS Notifications
-
+9. Configure SMS Notifications
 Set up Africa's Talking API credentials and configured my application to use these credentials for sending SMS notifications.
 
+10. CI/CD Pipeline with Ansible
+I Set up ssh keys on my machine and the server for easier and secure communications.
+
+I tested if I can reach my server after defining my hosts "linux" group,
+```sh
+ansible linux -m ping
+```
+
+![alt text](screenshots/ansible-ping-hosts.png)
 
 
 ## User Journey

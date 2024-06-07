@@ -59,7 +59,7 @@ def home():
         return redirect(url_for('login'))
 
 
-#Add Customers
+#Add Customers route
 @app.route('/add_customer', methods=['GET', 'POST'])
 def addCustomer():
     if "user" in session:
@@ -94,7 +94,7 @@ def addCustomer():
     else:
         return redirect(url_for('login'))
 
-#Add Orders
+#Add Orders route
 @app.route('/add_order', methods=['GET', 'POST'])
 def addOrder():
     if "user" in session:
@@ -147,7 +147,7 @@ def addOrder():
         return redirect(url_for('login'))
 
 
-
+#Logout Route
 @app.route('/logout')
 def logout():
     id_token = session['user']['id_token']

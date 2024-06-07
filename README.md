@@ -22,9 +22,9 @@ The Customer Order App is a simple web application designed for managing custome
 - Africa's Talking API credentials for SMS notifications
 
 1. ### Testing
-Tested my application's routes.
-Testing files: 
-- ![alt text](test_app.yaml)
+Used pytest to test my application's routes.
+Testing file:
+/test_app.py
 
 ![alt text](screenshots/testing.png)
 

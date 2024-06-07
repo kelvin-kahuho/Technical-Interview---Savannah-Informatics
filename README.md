@@ -66,12 +66,13 @@ I installed and configured microk8s on my server to deploy the Customer Order Ap
 
 These files collectively ensured a robust and scalable deployment of the application within the Kubernetes cluster managed by microk8s.
 
-6. ### Deployed the app on microk8s
+You can find the configuration file in the root directory of this project.
 
-Configurations files are 
-![alt text](deployment.yaml) 
-![alt text](service.yaml)
-![alt text](hpa.yaml)
+/deployment.yaml 
+/service.yaml
+/hpa.yaml
+
+6. ### Deployed the app on microk8s
 
 Applied the deployment:
 

@@ -51,9 +51,9 @@ Installed and set up microk8s on my server.
 5. ### Deployed the app on microk8s
 
 Configurations files are 
-- ![alt text](deployment.yaml) 
-- ![alt text](service.yaml)
-- ![alt text](hpa.yaml)
+- /deployment.yaml
+- /service.yaml
+- /hpa.yaml
 
 Applied the deployment:
 

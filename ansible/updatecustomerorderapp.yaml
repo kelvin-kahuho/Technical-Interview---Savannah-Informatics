@@ -1,0 +1,31 @@
+---
+- hosts: linux
+  tasks:
+    - name: Pull the updated Docker image
+      docker_image:
+        name: kestack/customerorder-app:v1.0
+        source: pull
+
+    - name: Update the Kubernetes Deployment or Pod with the new image
+      k8s:
+        state: present
+        definition: |
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: customer-order-app
+          spec:
+            selector:
+              matchLabels:
+                app: customer-order-app
+            template:
+              metadata:
+                labels:
+                  app: customer-order-app
+              spec:
+                containers:
+                - name: customer-order-app
+                  image: kestack/customerorder-app  # Updated image name and tag
+
+    - name: Optionally perform a rolling update
+      command: microk8s kubectl rollout status deployment.yaml

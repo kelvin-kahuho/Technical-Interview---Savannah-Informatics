@@ -1,0 +1,8 @@
+---
+- name: iluvdocker
+  hosts: linux
+  become_method: true
+
+  tasks:
+    - name: print docker images on system
+      command: docker ps

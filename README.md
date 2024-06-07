@@ -1,5 +1,5 @@
 # Technical-Interview---Savannah-Informatics
-This is a guide on how I accomplished the Technical assignment for the Technical Support Engineer.
+This is a guide on how I accomplished the Technical assignment for the Technical Support Engineer role at Savannah Informatics.
 
 The Customer Order App is a simple web application designed for managing customer orders. It has been containerized using Docker, deployed on a microk8s scalable cluster.
 

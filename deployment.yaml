@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-order-app
+spec:
+  selector:
+    matchLabels:
+      app: customer-order-app
+  template:
+    metadata:
+      labels:
+        app: customer-order-app
+    spec:
+      containers:
+      - name: customer-order-app
+        image: kestack/customerorder-app
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000

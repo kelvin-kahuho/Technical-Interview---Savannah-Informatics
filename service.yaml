@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: expose-customer-order-app
+spec:
+  selector:
+    app: customer-order-app
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: LoadBalancer

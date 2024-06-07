@@ -39,8 +39,8 @@ Built and pushed the Docker image to Docker Hub.
 ![alt text](screenshots/Docker_build1.png)
 
 ```sh
-docker build -t kestack/customer-order-app:latest .
-docker push kestack/customer-order-app:latest
+docker build -t kestack/customerorder-app:latest .
+docker push kestack/customerorder-app:latest
 ```
 
 4. ### Pull Docker Image on Server

@@ -7,17 +7,16 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body>
-    <div class="container">
-        <button class="button" onclick="location.href='/add_customer'">Add Customer</button>
-        <p class="spacer"></p>
-        <button class="button" onclick="location.href='/add_order'">Add Order</button>
+        <div class="container">
+            <div class="menu">
+                <button class="button" onclick="location.href='/add_customer'">Add Customer</button>
+                <p class="spacer"></p>
+                <button class="button" onclick="location.href='/add_order'">Add Order</button>
+                <p class="spacer"></p>
+                <button class="button" onclick="location.href='/logout'">Logout</button>
+            </div>
+        </div>
 
     </div>
-
-    <footer>
-
-        <button class="button" onclick="location.href='/logout'">Logout</button>
-
-    </footer>
 </body>
 </html>

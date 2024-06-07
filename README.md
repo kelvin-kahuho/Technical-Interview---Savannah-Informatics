@@ -27,8 +27,9 @@ I used Flask to create a web service and define routes for the application.
 
 2. ### Testing
 Tested my application's routes.
-Testing files: 
-![alt text](test_app.yaml)
+Testing files:
+<br>  
+/test_app.yaml
 
 ![alt text](screenshots/testing.png)
 
@@ -68,8 +69,8 @@ These files collectively ensured a robust and scalable deployment of the applica
 
 You can find the configuration file in the root directory of this project.
 
-/deployment.yaml 
-/service.yaml
+/deployment.yaml <br> 
+/service.yaml <br> 
 /hpa.yaml
 
 6. ### Deployed the app on microk8s
@@ -105,10 +106,13 @@ Created Orders Table
 Overall Database Schema
 ![alt text](<screenshots/Database Schema.png>)
 
-9. Configure SMS Notifications
+9. Configured SMS Notifications
 Set up Africa's Talking API credentials and configured my application to use these credentials for sending SMS notifications.
 
-10. CI/CD Pipeline with Ansible
+SMS Sent to customer after order creation
+![alt text](screenshots/SMS-sending.png)
+
+10. Configured CI/CD Pipeline with Ansible
 I Set up ssh keys on my machine and the server for easier and secure communications.
 
 I tested if I can reach my server after defining my hosts "linux" group,
@@ -141,7 +145,7 @@ Add Order Page
 Success Adding a Page
 ![alt text](screenshots/add-order-success.png)
 
-SMS SSent to customer after order creation
+SMS Sent to customer after order creation
 ![alt text](screenshots/SMS-sending.png)
 
 

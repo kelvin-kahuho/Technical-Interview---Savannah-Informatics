@@ -28,7 +28,7 @@ I used Flask to create a web service and define routes for the application.
 2. ### Testing
 Tested my application's routes.
 Testing files: 
-- ![alt text](test_app.yaml)
+![alt text](test_app.yaml)
 
 ![alt text](screenshots/testing.png)
 
@@ -69,9 +69,9 @@ These files collectively ensured a robust and scalable deployment of the applica
 6. ### Deployed the app on microk8s
 
 Configurations files are 
-- ![alt text](deployment.yaml) 
-- ![alt text](service.yaml)
-- ![alt text](hpa.yaml)
+![alt text](deployment.yaml) 
+![alt text](service.yaml)
+![alt text](hpa.yaml)
 
 Applied the deployment:
 

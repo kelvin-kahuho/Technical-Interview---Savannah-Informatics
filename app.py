@@ -165,8 +165,6 @@ def logout():
         )
     )
 
-
-
 #Route for static files
 @app.route('/static/<path:filename>')
 def static_files(filename):
